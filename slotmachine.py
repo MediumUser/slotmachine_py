@@ -83,10 +83,6 @@ Design1.color('silver')
 Design1.write('🩸',move=False, align='center', font=('Impact', 44, 'normal'))
 
 
-Design1.shape('classic')
-Design1.shapesize(1)#Kad je program gotov, izbriši ove dvije funkcije
-
-
 Design1.color('white')
 Design1.goto(-243, 160)#-37
 Design1.write('×2',move=False, align='left', font=('Arial', 27, 'bold'))
