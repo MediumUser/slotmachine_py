@@ -46,7 +46,7 @@ Design1.fd(100)
 Design1.penup()
 Design1.goto(0,240)
 Design1.color('white')
-Design1.write('Dobrodošli u digitalni jednoruki jack,\nu prozor za ulogu novca morate upisati\nbroj kuna koji želite uložiti u automat kako\nbi ga pokrenuli. Statistika se nalazi ovdje\nispod teksta.', move=False, align='center', font=('arial', 10, 'normal'))
+Design1.write('Welcome to slotmachine!\nCurrency: €', move=False, align='center', font=('arial', 10, 'normal'))
 
 #Drawing statistics
 xSta=-280
@@ -101,9 +101,9 @@ Design1.write('×6',move=False, align='left', font=('Arial', 27, 'bold'))
 
 
 Design1.goto(-250,35)
-Design1.write('Uloženo:',move=False, align='center', font=('Arial', 9, 'normal'))
+Design1.write('Invested:',move=False, align='center', font=('Arial', 9, 'normal'))
 Design1.goto(250,35)
-Design1.write('Nagrada:',move=False, align='center', font=('Arial', 9, 'normal'))
+Design1.write('Reward:',move=False, align='center', font=('Arial', 9, 'normal'))
 #
 
 Thing1 = Turtle()
@@ -117,7 +117,7 @@ Thing1.hideturtle()
 
 Thing2.color('silver')
 Thing2.penup()
-Thing2.goto(-2.5, -35)#Važno
+Thing2.goto(-2.5, -35)#Important
 Thing2.hideturtle()
 
 Thing3.color('silver')
@@ -125,8 +125,8 @@ Thing3.penup()
 Thing3.goto(82.5, -35)
 Thing3.hideturtle()
 
-#CRTANJE PROGRAMA GOTOVO, AKCIJA PROGRAMA
-Uloga1 = numinput('Uloga novaca', 'Koliko želite uložiti kuna u automat(4 znamenke najviše)?', minval=1, maxval=9999)
+#DRAWING DETAILS OVER, MAKING FUNCTION
+Uloga1 = numinput('Money investment', 'How much money do you want to invest?(4 digits maximum)', minval=1, maxval=9999)
 Uloga1 = round(Uloga1)
 
 while True:
@@ -135,14 +135,14 @@ while True:
     Design1.write(Uloga1, move=True, align='right', font=('Arial', 12, 'bold'))
     Design1.lt(90)
     Design1.fd(12)
-    Design1.write('kn', move=False, align='center', font=('Arial', 12, 'bold'))
+    Design1.write('€', move=False, align='center', font=('Arial', 12, 'bold'))
 
 
     Thing1.write('...', move=False, align='center', font=('Arial', 45, 'normal'))
     Thing2.write('...', move=False, align='center', font=('Arial', 45, 'normal'))
     Thing3.write('...', move=False, align='center', font=('Arial', 45, 'normal'))
 
-    #Varijable za slučajan odabir
+    #Random variables
     Dobitak1=0
     Dobitak2=0
     Dobitak3=0
@@ -246,31 +246,31 @@ while True:
         Nagrada=Uloga1*2
         Design1.write(Nagrada, move=True, align='right' , font=('Arial', 15, 'bold'))
         Design1.fd(12)
-        Design1.write('kn', move=False, align='center', font=('Arial', 15, 'bold'))
+        Design1.write('€', move=False, align='center', font=('Arial', 15, 'bold'))
 
     elif Dobitak1==Dobitak2==Dobitak3==3:
         Nagrada=Uloga1*3
         Design1.write(Nagrada, move=True, align='right' , font=('Arial', 15, 'bold'))
         Design1.fd(12)
-        Design1.write('kn', move=False, align='center', font=('Arial', 15, 'bold'))
+        Design1.write('€', move=False, align='center', font=('Arial', 15, 'bold'))
 
     elif Dobitak1==Dobitak2==Dobitak3==4:
         Nagrada=Uloga1*4
         Design1.write(Nagrada, move=True, align='right' , font=('Arial', 15, 'bold'))
         Design1.fd(12)
-        Design1.write('kn', move=False, align='center', font=('Arial', 15, 'bold'))
+        Design1.write('€', move=False, align='center', font=('Arial', 15, 'bold'))
 
     elif Dobitak1==Dobitak2==Dobitak3==5:
         Nagrada=Uloga1*5
         Design1.write(Nagrada, move=True, align='right' , font=('Arial', 15, 'bold'))
         Design1.fd(12)
-        Design1.write('kn', move=False, align='center', font=('Arial', 15, 'bold'))
+        Design1.write('€', move=False, align='center', font=('Arial', 15, 'bold'))
 
     elif Dobitak1==Dobitak2==Dobitak3==6:
         Nagrada=Uloga1*6
         Design1.write(Nagrada, move=True, align='right' , font=('Arial', 15, 'bold'))
         Design1.fd(12)
-        Design1.write('kn', move=False, align='center', font=('Arial', 15, 'bold'))
+        Design1.write('€', move=False, align='center', font=('Arial', 15, 'bold'))
 
     else:
         Design1.color('red')
@@ -278,7 +278,7 @@ while True:
         Design1.color('silver')
     time.sleep(2)
 
-    Izbor = numinput('Pitanje', 'Dali želite pokušati ponovo?\n1=Da\n2=Ne', minval=1, maxval=2)
+    Izbor = numinput('Question', 'Try again?\n1=Yes\n2=No', minval=1, maxval=2)
     Izbor = round(Izbor)
     if Izbor==1:
         Thing1.color('black')
